@@ -15,6 +15,11 @@ app.get("/name/:name", function(req, res){
     res.redirect('https://google.com/search?q='+searchParam);
     // res.send("<h1>Hello " + searchParam +"</h1>");
  });
+
+ app.get("/*", function(req, res){
+    res.status(404).send('Sorry, we cannot find that!');
+ });
+ 
  
 
 app.listen(3000, function(){
