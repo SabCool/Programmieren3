@@ -1,0 +1,14 @@
+{
+  "name": "tumo",
+  "version": "1.0.0",
+  "description": "test package",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "SCL",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
