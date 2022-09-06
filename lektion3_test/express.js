@@ -1,6 +1,14 @@
 const express = require("express");
 const app = express();
 
+
+// app.use(express.static("../gol"));
+
+// app.get("/", function(req, res){
+//    res.redirect("index.html");
+// });
+
+
 app.get("/", function (req, res){
     res.send("<h1>Hello world...</h1>");
 });
