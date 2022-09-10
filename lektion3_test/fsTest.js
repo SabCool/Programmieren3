@@ -37,14 +37,19 @@ const obj = {
 
 function main() {
 
-    console.log(JSON.stringify(obj))
+    // console.log(JSON.stringify(obj))
+
     fs.writeFileSync("obj.json", JSON.stringify(obj));
+
     let text = fs.readFileSync("obj.json").toString();
     console.log(text);
+
     // make JS object
+    console.log(text.name);
+
     let jsObj = JSON.parse(text);
-    console.log(jsObj);
-    console.log(jsObj.name);
+    // console.log(jsObj);
+    // console.log(jsObj.name);
    
  }
  main();
