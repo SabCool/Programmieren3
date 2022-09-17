@@ -1,4 +1,5 @@
-class Predator {
+const common = require("./common");
+module.exports = class Predator {
     constructor(x, y){
         this.x = x;
         this.y = y;
@@ -50,7 +51,7 @@ class Predator {
         let grassFields = this.chooseFields(1);
         if(grassFields.length > 0){
             
-            let grassPos = random(grassFields);
+            let grassPos = common.getRandomElement(grassFields);
             let newX = grassPos[0];
             let newY = grassPos[1];
             matrix[newY][newX]= 2;
@@ -95,7 +96,7 @@ class Predator {
         let emptyFields = this.chooseFields(0);
         if(emptyFields.length > 0){
             //
-            let newPos = random(emptyFields);
+            let newPos = common.getRandomElement(emptyFields);
             let newX = newPos[0];
             let newY = newPos[1];
             matrix[newY][newX] = 2;
@@ -113,7 +114,7 @@ class Predator {
             // Schritt1:
             let emptyFields = this.chooseFields(0);
             if(emptyFields.length > 0){
-                let newPos = random(emptyFields);
+                let newPos = common.getRandomElement(emptyFields);
                 let newX = newPos[0];
                 let newY = newPos[1];
                 // Schritt2:
