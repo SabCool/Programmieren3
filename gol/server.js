@@ -1,7 +1,27 @@
+const express = require("Express");
+const { Server } = require("http");
+const app = express();
+
 const Grass = require("./grass");
 const Grazer = require("./grazer");
 const Predator = require("./predator")
 
+// Zugriff auf statische Dateien ermöglichen
+app.use(express.static("./"));
+
+// server stuff
+app.get("/", function(req, res){
+    // hier die index.html ausliefern
+    res.redirect("index.html");
+})
+
+app.listen("8888", function(){
+    console.log("Server wurde gestartet auf Port 8888");
+})
+
+
+
+//Game stuff
 matrix = [
     [0, 0, 1, 0, 0],
     [1, 0, 0, 0, 0],
